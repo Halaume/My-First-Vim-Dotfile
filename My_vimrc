@@ -155,7 +155,8 @@ set ffs=unix,dos,mac
 " 42 Norm
 """""""""""""""""""""""""""""""""""""""""""""""""
 
-" set colorcolumn=81
+set colorcolumn=81
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set smartindent
