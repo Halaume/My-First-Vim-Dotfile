@@ -15,6 +15,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'nanotech/jellybeans.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'frazrepo/vim-rainbow'
 
 " Filetype specific plugins
 Plug 'vim-syntastic/syntastic'
@@ -25,6 +26,23 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 filetype plugin on
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" My_plugin's
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"au FileType c,cpp,objc,objcpp call rainbow#load()
+let g:rainbow_active = 1
+
+let g:rainbow_load_separately = [
+    \ [ '*' , [['(', ')'], ['{', '}']] ],
+    \ [ '*.tex' , [['(', ')'], ['{', '}']] ],
+    \ [ '*.cpp' , [['(', ')'], ['{', '}']] ],
+    \ [ '*.{html,htm}' , [['(', ')'], ['{', '}']] ],
+    \ ]
+
+let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+let g:rainbow_ctermfgs = ['darkcyan', 'darkgrey', 'brown', 'darkmagenta']
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -192,8 +210,10 @@ set wrap "Wrap lines
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" rmapping <leader> to ','
+:let mapleader = ","
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+" map <silent> <leader><cr> :noh<cr>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
