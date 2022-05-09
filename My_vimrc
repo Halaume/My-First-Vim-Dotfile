@@ -28,7 +28,7 @@ call plug#end()
 filetype plugin on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" My_plugin's
+" My_plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "au FileType c,cpp,objc,objcpp call rainbow#load()
 let g:rainbow_active = 1
@@ -187,6 +187,13 @@ set nobackup
 set nowb
 set noswapfile
 set hidden
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Keep undo even after vim close 
+" => !Make sure to create the directory yourself
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set undofile
+set undodir=~/.vimundo/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
