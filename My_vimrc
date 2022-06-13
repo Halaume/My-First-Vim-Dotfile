@@ -272,8 +272,11 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap VIM 0 to first non-blank character and $ to EOL
-map 0 ^
-map m $
+nnoremap 0 ^
+nnoremap m $
+nnoremap t :tabNext <CR>
+nnoremap w :w <CR>
+nnoremap wq :wq <CR>
 
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
 nmap <M-j> mz:m+<cr>`z
