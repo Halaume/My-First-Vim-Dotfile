@@ -149,7 +149,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-	colorscheme icebeg
+	colorscheme iceberg
 catch
 endtry
 
