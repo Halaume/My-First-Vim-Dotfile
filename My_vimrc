@@ -46,6 +46,8 @@ let g:rainbow_load_separately = [
 
 let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 let g:rainbow_ctermfgs = ['darkcyan', 'darkgrey', 'brown', 'darkmagenta']
+" For hpp errors show
+let g:syntastic_cpp_check_header = 1
 
 let g:lens#disabled = 1
 " for auto resizing
