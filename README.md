@@ -1,4 +1,4 @@
-# My_vimrc
+# Awesome vimrc Beginner
 VIM
 
 My little vim setup with a few remap, hybride line numbers some plugins for C and C++ compile errors, theming/displaying whitespace and some colors. + My bonus annoying norme (basically normalize tab and auto intend with a little identifiers of col 80 because you just can't have any character after col 80 right?).
