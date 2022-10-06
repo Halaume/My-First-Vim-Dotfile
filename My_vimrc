@@ -230,7 +230,7 @@ set wrap "Wrap lines
 " rmapping <leader> to ','
 :let mapleader = ","
 " Disable highlight when <leader><cr> is pressed
-" map <silent> <leader><cr> :noh<cr>
+map <silent> <leader><cr> :noh<cr>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
@@ -276,7 +276,7 @@ try
 catch
 endtry
 
-" Return to last edit position when opening files (You want this!)
+" Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
