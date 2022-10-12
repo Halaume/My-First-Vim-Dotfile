@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
 " Animation
 Plug 'camspiers/animate.vim'
 Plug 'camspiers/lens.vim'
+Plug '42Paris/42header/plugin/stdheader.vim'
 
 " Theming
 Plug 'nanotech/jellybeans.vim'
@@ -37,6 +38,9 @@ filetype plugin on
 "au FileType c,cpp,objc,objcpp call rainbow#load()
 let g:rainbow_active = 1
 
+let g:user42 = 'ghanquer'
+let	g:mail42 = 'ghanquer@student.42.fr'
+
 let g:rainbow_load_separately = [
 			\ [ '*' , [['(', ')'], ['{', '}']] ],
 			\ [ '*.tex' , [['(', ')'], ['{', '}']] ],
@@ -52,9 +56,17 @@ let g:syntastic_cpp_check_header = 1
 let g:lens#disabled = 1
 " for auto resizing
 set winwidth=89
-set winheight=50
+set winheight=10
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM -> NVIM
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+if !has('nvim')
+	set ai "Auto indent
+	set autoread
+	set smarttab
+endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -208,11 +220,6 @@ set undodir=~/.vimundo/
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Be smart when using tabs ;)
-set smarttab
-
-" Reload a file when it is changed from outside
-set autoread
 
 " Write the file when we leave the buffer
 set autowrite
@@ -220,7 +227,6 @@ set autowrite
 " Make backspace behave as expected
 set backspace=eol,indent,start
 
-set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
@@ -238,6 +244,7 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 map <C-x> <C-W>x
+map <C-=> <C-W>=
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>:tabclose<cr>gT
@@ -276,7 +283,7 @@ try
 catch
 endtry
 
-" Return to last edit position when opening files
+" Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -288,7 +295,7 @@ nnoremap m $
 nnoremap t :tabNext <CR>
 nnoremap w :w <CR>
 nnoremap wq :wq <CR>
-tnoremap <ESC> <C-\><C-n>
+tnoremap <Esc> <C-\><C-n>
 
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
 nmap <M-j> mz:m+<cr>`z
