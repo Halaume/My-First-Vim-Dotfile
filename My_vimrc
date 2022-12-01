@@ -295,6 +295,12 @@ nnoremap m $
 nnoremap t :tabNext <CR>
 nnoremap w :w <CR>
 nnoremap wq :wq <CR>
+nnoremap <silent><leader>n :s!^!//!<cr>:noh<cr>
+
+" edit in Visual Block with simple 'i'
+vnoremap <expr> i mode()= ~'\cv' ? 'i' : 'I'
+
+" leave term mode with <Esc>
 tnoremap <Esc> <C-\><C-n>
 
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
