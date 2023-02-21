@@ -6,3 +6,8 @@ My little vim setup with a few remap, hybride line numbers some plugins for C an
 If you want to use it just copy the "My_vimrc" file in "$HOME/.vimrc" and put the "colors" directory in "$HOME/.vim/" and you should be good to go ! The first time you lunch it a window should appear and install all the plugins, just let this window do some stuff (it should only take a few seconds / a minute if you are slow) then you should close this window with ":q" and you are good. It may come back in case of update on the plugins.
 
 Made with a lot of CTRL + C into CTRL + V, some tuning by my own, a little time and a lot of hearth <3
+
+
+WARNING !
+
+Keep in mind that your vimrc file is unique and personnal (Also this one is really ugly and not well ordered), you can use mine as a template or to find something you want but there is a very low chance that my vimrc will suit you for real, we will certainly not use the same shortcuts/themes. I still hope you'll fine some interesting thing inside it. Feel free to ask any questions/make recommendation or give me any advices.
