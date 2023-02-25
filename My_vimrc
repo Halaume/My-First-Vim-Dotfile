@@ -1,4 +1,25 @@
-" TESTING MELVIN'S THINGS
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" 42 Norm
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+set colorcolumn=80
+highlight ColorColumn guibg=lightgrey
+
+"ctermbg=0 guibg=lightgrey
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set smartindent
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM -> NVIM
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if !has('nvim')
+	set ai "Auto indent
+	set autoread
+	set smarttab
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -11,15 +32,14 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" Animation
-Plug 'camspiers/animate.vim'
-Plug 'camspiers/lens.vim'
-Plug '42Paris/42header/plugin/stdheader.vim'
+" Animation Still have to work on that
+"Plug 'camspiers/animate.vim'
+"Plug 'camspiers/lens.vim'
 
 " Theming
 Plug 'nanotech/jellybeans.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'frazrepo/vim-rainbow'
 
 " Filetype specific plugins
@@ -33,7 +53,7 @@ call plug#end()
 filetype plugin on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" My_plugin's settings
+" plugin's settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "au FileType c,cpp,objc,objcpp call rainbow#load()
 let g:rainbow_active = 1
@@ -55,18 +75,9 @@ let g:syntastic_cpp_check_header = 1
 
 let g:lens#disabled = 1
 " for auto resizing
-set winwidth=89
-set winheight=10
+set winwidth=93
+set winheight=45
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => VIM -> NVIM
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-if !has('nvim')
-	set ai "Auto indent
-	set autoread
-	set smarttab
-endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -141,7 +152,6 @@ endif
 " Add a bit extra margin to the left
 set foldcolumn=1
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -159,11 +169,12 @@ hi SpecialKey guifg=darkgrey ctermfg=darkgrey
 ":match Myendline /¬/
 
 " highlighting Tabs
-
 set fillchars=vert:│
 
 " Enable syntax highlighting
 syntax enable
+
+set background=dark
 
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
@@ -175,7 +186,6 @@ try
 catch
 endtry
 
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -190,16 +200,6 @@ set encoding=utf8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
-
-"""""""""""""""""""""""""""""""""""""""""""""""""
-" 42 Norm
-"""""""""""""""""""""""""""""""""""""""""""""""""
-
-set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set smartindent
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -255,13 +255,12 @@ map <leader>ba :bufdo bd<cr>
 map <leader>l :bnext<cr>
 map <leader>h :bprevious<cr>
 
-"" Don't work for some reasons
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
-map <leader>t<leader> :tabnext
+map <leader>t :tabnext
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
@@ -295,10 +294,11 @@ nnoremap m $
 nnoremap t :tabNext <CR>
 nnoremap w :w <CR>
 nnoremap wq :wq <CR>
+"Ugly but functionnal way to comment a line with '//'
 nnoremap <silent><leader>n :s!^!//!<cr>:noh<cr>
 
-" edit in Visual Block with simple 'i'
-vnoremap <expr> i mode()= ~'\cv' ? 'i' : 'I'
+" edit in visual block with simple 'i'
+vnoremap <expr> i mode()=~'\cv' ? 'i' : 'I'
 
 " leave term mode with <Esc>
 tnoremap <Esc> <C-\><C-n>
@@ -356,6 +356,7 @@ map <leader>pp :setlocal paste!<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Thodore's cpp things
+" => He had fun but not really working fine
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 function s:protec(string)
