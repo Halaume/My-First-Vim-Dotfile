@@ -6,7 +6,7 @@
 "    By: ghanquer <marvin@42.fr>                    +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2023/02/28 17:39:23 by ghanquer          #+#    #+#              "
-"    Updated: 2023/02/28 16:52:27 by ghanquer         ###   ########.fr        "
+"    Updated: 2023/02/28 17:23:34 by ghanquer         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -67,7 +67,24 @@ filetype plugin on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " plugin's settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"VIM-CPP-MODERN
 "au FileType c,cpp,objc,objcpp call rainbow#load()
+"
+" Disable function highlighting (affects both C and C++ files)
+let g:cpp_function_highlight = 1
+
+" Enable highlighting of C++11 attributes
+let g:cpp_attributes_highlight = 1
+
+" Highlight struct/class member variables (affects both C and C++ files)
+let g:cpp_member_highlight = 1
+
+" Put all standard C and C++ keywords under Vim's highlight group 'Statement'
+" (affects both C and C++ files)
+let g:cpp_simple_highlight = 1
+"END VIM-CPP-MODERN
+
+
 let g:rainbow_active = 1
 
 let g:user42 = 'ghanquer'
