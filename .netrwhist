@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/goinfre/ghanquer/lok/ex02'
+let g:netrw_dirhist_0='/goinfre/ghanquer/lok/ex01'
+let g:netrw_dirhist_9='/goinfre/ghanquer/lok/ex00'
+let g:netrw_dirhist_8='/mnt/nfs/homes/ghanquer/.config/nvim'
+let g:netrw_dirhist_7='/mnt/nfs/homes/ghanquer/Documents/My_Project/CPP-Module/CPP03/ex01'
+let g:netrw_dirhist_6='/mnt/nfs/homes/ghanquer/Documents/My_Project/Cub3D/src_bonus'
+let g:netrw_dirhist_5='/mnt/nfs/homes/ghanquer/Documents/My_Project/Cub3D/inc'
+let g:netrw_dirhist_4='/mnt/nfs/homes/ghanquer/.vim/plugged/vim-rainbow/plugin'
+let g:netrw_dirhist_3='/mnt/nfs/homes/ghanquer/.vim/plugged/vim-rainbow'
+let g:netrw_dirhist_2='/mnt/nfs/homes/ghanquer/.vim/autoload'

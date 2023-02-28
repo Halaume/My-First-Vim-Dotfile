@@ -1,3 +1,15 @@
+" **************************************************************************** "
+"                                                                              "
+"                                                         :::      ::::::::    "
+"    .vimrc                                             :+:      :+:    :+:    "
+"                                                     +:+ +:+         +:+      "
+"    By: ghanquer <marvin@42.fr>                    +#+  +:+       +#+         "
+"                                                 +#+#+#+#+#+   +#+            "
+"    Created: 2023/02/28 17:39:23 by ghanquer          #+#    #+#              "
+"    Updated: 2023/02/28 16:52:27 by ghanquer         ###   ########.fr        "
+"                                                                              "
+" **************************************************************************** "
+
 """""""""""""""""""""""""""""""""""""""""""""""""
 " 42 Norm
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -40,7 +52,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'nanotech/jellybeans.vim'
 Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
-Plug 'frazrepo/vim-rainbow'
+Plug 'frazrepom/vim-rainbow'
 
 " Filetype specific plugins
 Plug 'vim-syntastic/syntastic'
@@ -329,13 +341,13 @@ if has("autocmd")
 	autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
 endif
 
-nnoremap <silent> <Leader>ve :sp ~/.vimrc<CR>
+nnoremap <silent> <Leader>ve :sp ~/.vim/.vimrc<CR>
 
-nnoremap <silent> <Leader>vs :source ~/.vimrc<CR>
+nnoremap <silent> <Leader>vs :source ~/.vim/.vimrc<CR>
 
 autocmd VimEnter * ++nested
       \   if argc() is# 0
-      \ |   edit ~/.vimrc
+      \ |   edit ~/.vim/.vimrc
       \ | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
