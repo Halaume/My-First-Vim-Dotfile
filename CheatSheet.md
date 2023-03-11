@@ -3,9 +3,11 @@
 ##	Exiting
 |	Cmd		|	Purpuse	|
 |	:----:	|	:----:	|
-|`:q`		|Close file |
+|`:q`		|Close file	|
 |`:qa`		|Close all files	|
 |`:w` / `:x`|Save and close file	|
+|`ZZ`		|Save and quit	|
+|`ZQ`		|Quit without checking changes	|
 
 ##	Exiting insert mode
 ##	Clipboard
