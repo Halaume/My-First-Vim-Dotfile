@@ -6,7 +6,7 @@
 
 ##	Exiting
 |	Cmd		|	Purpose	|
-|	:----:	|	:----:	|
+|	:----:	|	----:	|
 |`:q`		|Close file	|
 |`:qa`		|Close all files	|
 |`:w` / `:x`|Save and close file	|
@@ -15,15 +15,30 @@
 
 ##	Exiting insert mode
 |	Cmd		|	Purpose	|
-|	:----:	|	:----:	|
+|	:----:	|	----:	|
 |`Esc` / `<C-[>`	|Exit insert mode	|
 |`<C-C>`	|Exit insert mode, and abort current command	|
 
 ##	Clipboard
+|	Cmd		|	Purpose	|
+|	:----:	|	----:	|
+|`x`	|Delete character	|
+|`dd`	|Delene line (Cut)	|
+|`yy`	|Yank line (Copy)	|
+|`p`	|Paste	|
+|`P`	|Paste before	|
+|`"*p` / `"+p`	|Paste from system clipboard	|
+|`"*y` / `"+y`	|Paste to system clipboard	|
 
 ##	Find & Replace
+|	Cmd		|	Purpose	|
+|	:----:	|	----:	|
+|`:%s/foo/bar/g`|Replacce foo with bar in whole document	|
 
 ##	Navigating
+|	Cmd		|	Purpose	|
+|	:----:	|	----:	|
+|`h` `j` `k` `l`|Arrow keys	|
 
 ##	Editing
 
