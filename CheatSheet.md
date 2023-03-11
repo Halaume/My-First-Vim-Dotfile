@@ -1,7 +1,7 @@
 #	GLOBAL
 
 ##	Exiting
-|	Cmd		|	Purpuse	|
+|	Cmd		|	Purpose	|
 |	:----:	|	:----:	|
 |`:q`		|Close file	|
 |`:qa`		|Close all files	|
