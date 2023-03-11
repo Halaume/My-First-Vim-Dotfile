@@ -1,0 +1,3 @@
+[submodule "Vim-CheatSheet"]
+	path = Vim-CheatSheet
+	url = git@github.com:Halaume/Vim-CheatSheet.git
