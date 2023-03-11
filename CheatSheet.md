@@ -1,6 +1,11 @@
 #	GLOBAL
 
 ##	Exiting
+|	Cmd		|	Purpuse	|
+|	:----:	|	:----:	|
+|:q			|Close file |
+|:qa		|Close all files |
+
 ##	Exiting insert mode
 ##	Clipboard
 ##	Find & Replace
