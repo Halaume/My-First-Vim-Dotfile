@@ -373,6 +373,10 @@ autocmd VimEnter * ++nested
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
+" Add Syntastic compiler flags and include directories
+let g:syntastic_c_compiler_options = '-Wall -Wextra -Werror -Wpedantic -Wformat=2 -Wformat-overflow=2 -Wformat-truncation=2 -Wstringop-overflow=4 -Winit-self -ftrapv -Wdate-time'
+let g:syntastic_c_include_dirs = ['../inc', 'inc']
+
 " Quickly open a buffer for scribble
 map <leader>q :e ~/buffer<cr>
 
